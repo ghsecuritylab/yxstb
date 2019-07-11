@@ -1,0 +1,4 @@
+list (APPEND NETWORK_SRC_LIST
+    ${NETWORK_MODULE_DIR}/ErrorCodes/C30.cpp
+    # ${NETWORK_MODULE_DIR}/ErrorCodes/${CUSTOMER}.${STBTYPE}.cpp
+)

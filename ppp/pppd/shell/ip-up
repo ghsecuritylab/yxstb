@@ -1,0 +1,35 @@
+#!/bin/sh
+
+INTERFACE=$1
+DEVNAME=$2
+PHYCARD=$3
+BAUDRATE=$4
+ADDRTYPE=$5
+IPADDR=$6
+GATEWAYS=$7
+DNSSERVERS="$8 $9"
+ERRCODE=$10
+IPPARAM=$11
+
+if [ "$ADDRTYPE" == "v4" ]; then
+	NETMASK=`ipcalc -m $IPADDR | cut -d= -f2`
+	#NETMASK=${NETMASK#*NETMASK=}
+	BROADCAST=`ipcalc -b $IPADDR | cut -d= -f2`
+	NETWORK=`ipcalc -n $IPADDR | cut -d= -f2`
+	PREFIX=
+else
+	NETMASK=
+	BROADCAST=
+	NETWORK=
+	PREFIX=64
+fi
+
+if [ "$ERRCODE" == "0" ]; then
+	rm -f /var/misc/ppp/ppp-"$PHYCARD".info
+	for x in INTERFACE DEVNAME PHYCARD BAUDRATE ADDRTYPE IPADDR NETMASK \
+		GATEWAYS BROADCAST NETWORK DNSSERVERS ERRCODE IPPARAM; do
+			eval echo "$x=\'\$$x\'" >> /var/misc/ppp/ppp-"$PHYCARD".info
+	done
+fi
+
+set -- /var/misc/ppp/ppp-"$PHYCARD".info "$x"

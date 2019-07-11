@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="gbk"?>
+<server>
+        <info>
+                <name>够级</name>
+                <minplayers>6</minplayers>
+                <maxplayers>6</maxplayers>
+                <desc>某人的测试版够级规则。如果你看到了这行文字，说明你的版本正确。</desc>
+        </info>
+        <game>
+                <rule text="点" sid="1001" select="1">
+                        <option id="1">必须开点，否则上点供</option>
+                        <option id="2">不必开点，不必上点供</option>
+                </rule>
+                <rule text="闷" sid="1002" select="3">
+                        <option id="1">不憋三，无闷供</option>
+                        <option id="2">憋三，无闷供</option>
+                        <option id="3">憋三，有闷供</option>
+                </rule>
+                <rule text="烧" sid="1003" select="1">
+                        <option id="1">有烧供</option>
+                        <option id="2">无烧供</option>
+                </rule>
+                <rule text="拉" sid="1004" select="1">
+                        <option id="1">有大拉供和二拉供</option>
+                        <option id="2">只有大拉供</option>
+                </rule>
+                <rule text="买三" sid="1005" select="1">
+                        <option id="1">6张三，买三</option>
+                        <option id="2">16张三，买三</option>
+                        <option id="3">16张三，不买三</option>
+                </rule>
+                <rule text="三个二闷大花" sid="1006" select="1">
+                        <option id="1">是</option>
+                        <option id="2">否</option>
+                </rule>
+        </game>
+</server>
+

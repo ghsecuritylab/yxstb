@@ -1,0 +1,11 @@
+
+LIST (APPEND IPTV_CXX_SOURCES
+    ${CMAKE_CURRENT_LIST_DIR}/Tr069DeviceInfo.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/Tr069X_CTC_IPTV_Monitor.cpp
+    )
+    
+LIST (APPEND INCLUDES
+    ${CMAKE_CURRENT_LIST_DIR}/
+    )
+    
+include (${CMAKE_CURRENT_LIST_DIR}/X_CTC_IPTV_Alarm/CMakeLists.txt)

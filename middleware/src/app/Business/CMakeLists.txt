@@ -1,0 +1,11 @@
+
+LIST (APPEND IPTV_CXX_SOURCES
+    ${CMAKE_CURRENT_LIST_DIR}/Business.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/Session.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/Account.cpp
+    )
+
+LIST (APPEND INCLUDES
+    ${CMAKE_CURRENT_LIST_DIR}
+    )
+

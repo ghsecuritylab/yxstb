@@ -1,0 +1,11 @@
+LIST (APPEND IPTV_CXX_SOURCES
+    ${CMAKE_CURRENT_LIST_DIR}/BootImagesShow.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/BootImagesDownload.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/BootImagesCheck.cpp
+    )
+
+LIST (APPEND INCLUDES
+    ${CMAKE_CURRENT_LIST_DIR}
+)
+
+

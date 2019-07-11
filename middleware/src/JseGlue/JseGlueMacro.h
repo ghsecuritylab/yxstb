@@ -1,0 +1,8 @@
+#ifndef _JSEGLUEMACRO_H
+#define _JSEGLUEMACRO_H 
+
+#define IJSEBUFFSIZE  8192
+#define IJSENAMESIZE  256
+#define IJSEURLLENGTH 1024
+
+#endif

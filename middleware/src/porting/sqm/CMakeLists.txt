@@ -1,0 +1,32 @@
+
+#include (${CMAKE_CURRENT_LIST_DIR}/${MODULE_SQM_VER}Sqm/CMakeLists.txt)
+
+IF(${MODULE_SQM_VER} STREQUAL "none")
+    return ()
+ENDIF(${MODULE_SQM_VER} STREQUAL "none")
+
+LIST (APPEND IPTV_CXX_SOURCES
+    ${CMAKE_CURRENT_LIST_DIR}/${MODULE_SQM_VER}Sqm/sqm_port.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/SqmAssertions.cpp
+    )
+
+LIST (APPEND INCLUDES
+    ${CMAKE_CURRENT_LIST_DIR}/
+    ${CMAKE_CURRENT_LIST_DIR}/${MODULE_SQM_VER}Sqm
+    ${PROJECT_TOP_DIR}/EC2108_C27/ipstb/src/include
+    ${PROJECT_TOP_DIR}/EC2108_C27/ipstb/src/app
+    )
+
+string (TOUPPER ${MODULE_SQM_VER} SQMTEMP)
+LIST (APPEND DEFINITIONS
+    "-DSQM_INCLUDED"
+    "-DSQM_VERSION_${SQMTEMP}"
+    )
+
+IF(${MODULE_SQM_VER} STREQUAL "Android")  
+    return ()
+ENDIF(${MODULE_SQM_VER} STREQUAL "Android")
+
+add_subdirectory (${CMAKE_CURRENT_LIST_DIR}/${MODULE_SQM_VER}Sqm/src)
+
+

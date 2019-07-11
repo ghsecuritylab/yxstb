@@ -1,0 +1,6 @@
+
+LIST (APPEND IPTV_CXX_SOURCES
+
+    ${CMAKE_CURRENT_LIST_DIR}/Tr069STBDevice1.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/Tr069Capabilities.cpp
+    )

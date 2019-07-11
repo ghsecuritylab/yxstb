@@ -1,0 +1,15 @@
+
+IF (MODULE_BLUETOOTH)
+    LIST (APPEND DEFINITIONS
+        "-DBLUETOOTH"
+        )
+    LIST (APPEND IPTV_CXX_SOURCES 
+        ${CMAKE_CURRENT_LIST_DIR}/BluetoothAssertions.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/bt_parse.cpp
+        )
+    LIST (APPEND INCLUDES
+        ${CMAKE_CURRENT_LIST_DIR}
+        )
+ENDIF (MODULE_BLUETOOTH)
+
+

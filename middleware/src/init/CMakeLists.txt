@@ -1,0 +1,13 @@
+
+
+LIST (APPEND IPTV_CXX_SOURCES
+    ${CMAKE_CURRENT_LIST_DIR}/customer.cpp
+    )
+
+LIST (APPEND INCLUDES
+    ${CMAKE_CURRENT_LIST_DIR}
+    )
+
+include (${CMAKE_CURRENT_LIST_DIR}/${CUSTOMER}/${STBTYPE}/CMakeLists.txt)
+
+

@@ -1,0 +1,17 @@
+IF (MODULE_Management STREQUAL "hybroad")
+
+	LIST (APPEND IPTV_C_SOURCES
+		${CMAKE_CURRENT_LIST_DIR}/mgmtTr069ConfigLoad.c
+		)
+	LIST (APPEND IPTV_CXX_SOURCES
+    #Tr069
+		${CMAKE_CURRENT_LIST_DIR}/mgmtModuleTr069.cpp
+		)
+
+	LIST (APPEND INCLUDES
+		${CMAKE_CURRENT_LIST_DIR}
+		)
+ENDIF (MODULE_Management STREQUAL "hybroad")
+
+
+

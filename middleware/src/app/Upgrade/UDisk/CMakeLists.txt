@@ -1,0 +1,12 @@
+
+LIST (APPEND IPTV_CXX_SOURCES
+	${CMAKE_CURRENT_LIST_DIR}/UpgradeUdiskSource.cpp
+	${CMAKE_CURRENT_LIST_DIR}/UdiskUpgrade.cpp
+)
+
+LIST (APPEND INCLUDES
+    ${CMAKE_CURRENT_LIST_DIR}
+    )
+
+
+

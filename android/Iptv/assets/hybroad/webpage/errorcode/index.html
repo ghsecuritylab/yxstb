@@ -1,0 +1,593 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta name="page-view-size" content="1280*720">
+<title>errorcode_page</title>
+<script src="../common/js/jsAPI.js"></script>
+<style type="text/css">
+body{
+	background:url(image/bg.png) no-repeat;
+	margin:0 0 0 0;
+	color: #FFFFFF;
+}
+div{
+	position:absolute;
+}
+a:active{outline: none;}
+button{outline:none;background:transparent; color:#ffffff; border:none;}
+button:focus{outline:none;background:transparent; color:#ffffff; border:none;}
+.connecterrStr {
+	top:296px;
+	left:403px;
+	width:590px;
+	line-height:36px;
+	font-size: 18px;
+	font-family: "黑体";
+}
+.connecterrTitle {
+	top:186px;
+	left:403px;
+	width:750px;
+	font-weight:900;
+	font-size: 24px;
+	font-family: "黑体";
+	text-align:left;
+}
+.connecterrTitle1 {
+	top:233px;
+	left:520px;
+	width:470px;
+	font-size: 24px;
+	font-family: "黑体";
+	text-align:left;
+}
+.connecterrTitle2 {
+	top:233px;
+	left:403px;
+	width:580px;
+	font-size: 24px;
+	font-family: "黑体";
+	text-align:left;
+}
+.connecterrTitle3 {
+	top:225px;
+	left:150px;
+	width:360px;
+	line-height:25px;
+	font-size: 19px;
+	font-family: "黑体";
+	text-align:left;
+}
+.errImg{
+	position:absolute;
+	top:187px;
+	left:308px;
+	width:62px;
+	height:62px;
+	background:url(image/warning.png) no-repeat;
+}
+#inputArea{
+	position:absolute;
+	top:353px;
+	left:403px;
+	width:580px;
+	font-size: 24px;
+	font-family: "黑体";
+	text-align:left;
+}
+#user{
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+#pw{
+	position:absolute;
+	left:0px;
+	top:50px;
+}
+#submit{
+	position:absolute;
+	left:40px;
+	top:110px;
+}
+#cancel{
+	position:absolute;
+	left:190px;
+	top:110px;
+}
+#submitA{
+	position:absolute;
+	left:50px;
+	top:4px;
+	font-size: 12px;
+}
+#cancelA{
+	position:absolute;
+	left:50px;
+	top:4px;
+	font-size: 12px;
+}
+#linkTitle{
+	position:absolute;
+	left:580px;
+	top:200px;
+	width:200px;
+	font-size: 26px;
+}
+#linkInfo{
+	position:absolute;
+	left:550px;
+	top:320px;
+	width:200px;
+	font-size: 26px;
+}
+</style>
+<script language="JavaScript">
+
+        var     reboottimer;
+        function schedule_restart()
+        {
+                reboottimer = setTimeout("iPanel.ioctlWrite(\"JseSysControl\", \"reboot\");", 5000);
+        }
+
+        function cancel_restart()
+        {
+                iPanel.ioctlWrite("printf", "reboottimer=" + reboottimer);
+                if(reboottimer != undefined)
+                {
+                        clearTimeout(reboottimer);
+                        reboottimer = undefined;
+                }
+        }
+
+        function getParameter(name)
+        {
+                var paramStr = location.search;
+                if(paramStr.length == 0)
+                return null;
+                if(paramStr.charAt(0) != '?')
+                return null;
+                paramStr = unescape(paramStr);
+                paramStr = paramStr.substring(1);
+                if(paramStr.length == 0)
+                return null;
+                var params = paramStr.split('&');
+                var p = null;
+                for(var i=0; i<params.length; i++)
+                {
+                        if(params[i].indexOf(name) >= 0)
+                        {
+                                p = params[i].split('=');
+                                p = p[1];        
+                        }
+                }
+                return p;
+        }
+
+        function Load( )
+        { 
+                iPanel.ioctlWrite("JseBrowserControl", "funkey:error");
+                var v = parseInt(getParameter("code"));
+				iPanel.ioctlWrite("ShowPic", "2");
+                error_key(v);
+                //error_key(417);
+        }
+
+        function UnLoad( )
+        {
+        }
+        function clearInfo(){   //清除提示信息
+                document.getElementById('errinfo').innerHTML = "";
+                document.getElementById('errmsg').innerHTML = "";
+        }
+
+        //document.onkeypress = error_key;
+
+        function error_key(k)
+        {
+				var titleErrorNum = "";
+				var titleErrortTitle = "";
+				var titleErrortInfo = "";
+                var textError = "";
+				var textPromptr = "";
+				alert("----------error key----------"+k);
+                switch(k) 
+                {
+			    case 10000:
+					titleErrorNum = "错误代码:&nbsp;&nbsp;10000";
+					titleErrortTitle= "错误信息：";
+					titleErrortInfo = "非常抱歉，机顶盒网络连接失败！";
+					textError = "请按以下步骤检查：<br>1、请检查网线是否正常连接；<br>2、请尝试断电重启机顶盒；<br>3、若按以上操作，问题仍未解决，请拨打10000客户服务热线进行咨询。";
+                    break;
+                case 10001:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;10001";
+						titleErrortTitle= "错误信息：";
+						titleErrortInfo = "IP地址冲突，机顶盒网络连接失败！";
+                        textError = "请按以下步骤检查：<br>1、请尝试断电重启机顶盒重新获取IP地址；<br>2、请检查家庭网络中是否有其他设备通过静态IP方式占用该地址并更换IP地址。<br>3、若按以上操作，问题仍未解决，请拨打10000客户服务热线进行咨询。";
+                        break;
+               case 10010:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;10010";
+ 						titleErrortTitle= "错误信息：";
+						titleErrortInfo = "机顶盒自动获取IP地址失败或无效，网络连接失败！";
+                        textError = "请按以下步骤检查：<br>1、请检查STB与家庭路由器或DHCP服务器之间网络是否连通；<br>2、请尝试断电重启机顶盒；<br>3、请尝试断电重启机顶盒上联的路由器；<br>4、若您机顶盒使用自动获取IP方式连接网络，请尝试改用PPPoE拨号方式连接网络；<br>5、若按以上操作，问题仍未解决，请拨打10000客户服务热线进行咨询。";
+                        break;
+			   case 10011:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;10011";
+ 						titleErrortTitle= "错误信息：";
+						titleErrortInfo = "机顶盒自动获取IP地址失败或无效，网络连接失败！";
+                        textError = "请按“菜单”或“首页”键尝试重新接入，如果依然失败，请按照以下步骤尝试解决故障：<br>1、请检查STB与家庭路由器或DHCP服务器之间网络是否连通；<br>2、请尝试断电重启机顶盒；<br>3、请尝试断电重启机顶盒上联的路由器；<br>4、若您机顶盒使用自动获取IP方式连接网络，请尝试改用PPPoE拨号方式连接网络；<br>5、若按以上操作，问题仍未解决，请拨打10000客户服务热线进行咨询。";
+                        break;
+               case 10021:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;10021";
+ 						titleErrortTitle= "错误信息：";
+						titleErrortInfo = "机顶盒网络帐号拨号失败，网络连接失败！";
+                        textError = "请按以下步骤检查：<br>1、请尝试断电重启机顶盒重新拨号；<br>2、请尝试断电重启modem重新拨号；<br>3、请尝试检查机顶盒、modem和分离器之间网线是否连接正常；<br>4、若按以上操作，问题仍未解决，请拨打10000客户服务热线进行咨询。";
+                        break;
+               case 10022:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;10022";
+ 						titleErrortTitle= "错误信息：";
+						titleErrortInfo = "机顶盒网络帐号拨号失败，网络连接失败！";
+                        textError = "1、请尝试断电重启机顶盒重新拨号；<br>2、请尝试断电重启modem重新拨号；<br>3、请尝试检查机顶盒、modem和分离器之间网线是否连接正常；<br>4、若按以上操作，问题仍未解决，请拨打10000客户服务热线进行咨询。";
+                        break;
+               case 10023:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;10023";
+ 						titleErrortTitle= "错误信息：";
+						titleErrortInfo = "机顶盒网络帐号拨号失败，网络连接失败！";
+                        textError = "请按“菜单”或“首页”键尝试重新接入，如果依然失败，请按照以下步骤尝试解决故障：<br>1、请尝试断电重启机顶盒重新拨号；<br>2、请尝试断电重启modem重新拨号；<br>3、若按以上操作，问题仍未解决，请拨打10000客户服务热线进行咨询。";
+                        break;
+			   case 10030:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;10030";
+                        textError = "时间同步失败，偶尔出现可忽略，<br>若频繁出现请拨打10000咨询。";
+                        break;
+			   case 10031:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;10031";
+                        textError = "时间同步失败，偶尔出现可忽略，<br>若频繁出现请拨打10000咨询。";
+                        break;
+               case 10040:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;10040";
+ 						titleErrortTitle= "错误信息：";
+						titleErrortInfo = "非常抱歉，机顶盒升级下载失败！";
+                        textError = "请按以下步骤检查：<br>1、请检查网线是否正常连接；<br>2、请断电重启modem和路由器；<br>3、请尝试断电重启机顶盒；<br>4、若按以上操作，问题仍未解决，请拨打10000客户服务热线进行咨询。";
+                        schedule_restart();
+                        break;
+               case 10041:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;10041";
+ 						titleErrortTitle= "错误信息：";
+						titleErrortInfo = "非常抱歉，机顶盒升级失败！";
+                        textError = "请按以下步骤检查：<br>1、请检查网线是否正常连接；<br>2、请断电重启modem和路由器；<br>3、请尝试断电重启机顶盒；<br>4、若按以上操作，问题仍未解决，请拨打10000客户服务热线进行咨询。";
+                        schedule_restart();
+                        break;
+               case 10042:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;10042";
+ 						titleErrortTitle= "错误信息：";
+						titleErrortInfo = "非常抱歉，机顶盒升级失败！";
+                        textError = "请按以下步骤检查：<br>1、请检查网线是否正常连接；<br>2、请断电重启modem和路由器；<br>3、请尝试断电重启机顶盒；<br>4、若按以上操作，问题仍未解决，请拨打10000客户服务热线进行咨询。";
+                        schedule_restart();
+                        break;
+			   case 10043:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;10043";
+ 						titleErrortTitle= "错误信息：";
+						titleErrortInfo = "非常抱歉，机顶盒升级失败！";
+                        textError = "请按以下步骤检查：<br>1、请检查网线是否正常连接；<br>2、请断电重启modem和路由器；<br>3、请尝试断电重启机顶盒；<br>4、若按以上操作，问题仍未解决，请拨打10000客户服务热线进行咨询。";
+                        schedule_restart();
+                        break;
+               case 10060:
+					    titleErrorNum = "错误代码:&nbsp;&nbsp;10060";
+ 						titleErrortTitle= "错误信息：";
+						titleErrortInfo = "未检测到无线网卡！";
+                        textError = "请按“菜单”或“首页”键尝试重新接入，如果依然失败，请按照以下步骤尝试解决故障：<br>1、请尝试断电重启机顶盒重新拨号；<br>2、请尝试断电重启modem重新拨号；<br>3、请尝试插拔机顶盒无线USB网卡重试；<br>4、请对机顶盒改用有线接入方式接入；<br>5、若按以上操作，问题仍未解决，请拨打10000客户服务热线进行咨询。";
+                        break;
+               case 10061:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;10061";
+ 						titleErrortTitle= "错误信息：";
+						titleErrortInfo = "未找到可用无线网络！";
+                        textError = "请按“菜单”或“首页”键尝试重新接入，如果依然失败，请按照以下步骤尝试解决故障：<br>1、请尝试断电重启机顶盒重新拨号；<br>2、请尝试断电重启modem重新拨号；<br>3、请检查无线路由配置是否正确；<br>4、请对机顶盒改用有线接入方式接入；<br>5、若按以上操作，问题仍未解决，请拨打10000客户服务热线进行咨询。";
+                        break;
+			  case 10071:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;10071";
+ 						titleErrortTitle= "错误信息：";
+						titleErrortInfo = "页面访问超时无响应。";
+                        textError = "请按“菜单”或“首页”键尝试重新接入，如果依然失败，请按照以下步骤尝试解决故障：<br>1、请尝试断电重启机顶盒重新拨号；<br>2、请检查接入网络是否正常；<br>3、若按以上操作，问题仍未解决，请拨打10000客户服务热线进行咨询。";
+                        break;
+               case 28101:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;28101";
+                        titleErrortTitle= "错误描述：网络帐号不存在或输入错误，请重新输入。若问题仍未解决，请拨打10000客户服务热线进行咨询。";
+						//titleErrortInfo = "";
+                        //textError = "";
+                        $("errorArea").style.display = "block";
+						$("inputArea").style.display = "block";
+						$("waitArea").style.display = "none";
+                        break;
+               case 22102:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;22102";
+                        titleErrortTitle= "错误信息：网络帐号密码输入错误。请重新输入。若问题仍未解决，请拨打10000客户服务热线进行咨询。";
+						//titleErrortInfo = "网络帐号密码输入错误。";
+                        //textError = "请重新输入正确的帐号。<br>若问题仍未解决，请拨打10000客户服务热线进行咨询。";
+                        $("errorArea").style.display = "block";
+						$("inputArea").style.display = "block";
+						$("waitArea").style.display = "none";
+                        break;
+               case 22104:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;22104";
+                        textError = "网络帐号已暂停服务，可能由于帐号欠费，<br>详情请咨询10000号。";
+                        break;
+               case 22106:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;22106";
+                        textError = "网络帐号所建立的连接无效，请关机等待10分<br>钟后重新开机。如果仍然不能正常登录，请联<br>系10000号处理。";
+                        break;
+               case 22122:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;22122";
+						textError = "网络帐号端口绑定，请联系10000号处理。";
+						break;
+               case 22130:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;22130";
+                        textError = "网络帐号端口绑定，请联系10000号处理。";
+                        break;
+               case 22103:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;22103";
+                        textError = "网络帐号所建立的连接无效，请关机等待10分钟后重新开机。<br>如果仍然不能正常登录，请拨打10000客户服务热线进行咨询。";
+                        break;
+			   case 10080:
+					    titleErrorNum = "错误代码:&nbsp;&nbsp;10080";
+                        titleErrortTitle= "错误信息：";
+						titleErrortInfo = "节目播放暂时出现异常。";
+                        textError = "请按“菜单”或“首页”键返回首页选择其他节目。<br>若长时间出现异常，请拨打10000客户服务热线进行咨询。";
+					   break;
+			   case 10081:
+					    titleErrorNum = "错误代码:&nbsp;&nbsp;10081";
+                        titleErrortTitle= "错误信息：";
+						titleErrortInfo = "找不到相关节目。";
+                        textError = "您所观看的节目正在维护中，请桉确定键返回上级页面观看其他节目。";
+					   break;
+			  case 10082:
+					    titleErrorNum = "错误代码:&nbsp;&nbsp;10082";
+                        titleErrortTitle= "错误信息：";
+						titleErrortInfo = "节目播放暂时出现异常。";
+                        textError = "请按“菜单”或“首页”键返回首页选择其他节目。<br>若长时间出现异常，请拨打10000客户服务热线进行咨询。";
+					   break;
+			  case 10083:
+					    titleErrorNum = "错误代码:&nbsp;&nbsp;10083";
+                        titleErrortTitle= "错误信息：";
+						titleErrortInfo = "网络繁忙，播放受影响。";
+                        textError = "请尝试重启机顶盒和modem，<br>若问题仍未解决，请休息一会稍后再试。<br>若长时间出现异常，请拨打10000客户服务热线进行咨询。";
+					   break;
+			  case 10084:
+					    titleErrorNum = "错误代码:&nbsp;&nbsp;10084";
+                        titleErrortTitle= "错误信息：";
+						titleErrortInfo = "节目播放暂时出现异常。";
+                        textError = "请返回首页选择其他节目或重启机顶盒。<br>若长时间出现异常，请拨打10000客户服务热线进行咨询。";
+					   break;
+			  case 10085:
+					    titleErrorNum = "错误代码:&nbsp;&nbsp;10085";
+                        titleErrortTitle= "错误信息：";
+						titleErrortInfo = "节目播放暂时出现异常。";
+                        textError = "请返回首页选择其他节目或重启机顶盒。<br>若长时间出现异常，请拨打10000客户服务热线进行咨询。";
+					   break;
+			  case 10086:
+					    titleErrorNum = "错误代码:&nbsp;&nbsp;10086";
+                        titleErrortTitle= "错误信息：";
+						titleErrortInfo = "节目播放暂时出现异常。";
+                        textError = "请返回首页选择其他节目或重启机顶盒。<br>若长时间出现异常，请拨打10000客户服务热线进行咨询。";
+					   break;
+			  case 10087:
+					    titleErrorNum = "错误代码:&nbsp;&nbsp;10087";
+                        titleErrortTitle= "错误信息：";
+						titleErrortInfo = "节目播放暂时出现异常。";
+                        textError = "请返回首页选择其他节目或重启机顶盒。<br>若长时间出现异常，请拨打10000客户服务热线进行咨询。";
+					   break;
+			  case 10088:
+					    titleErrorNum = "错误代码:&nbsp;&nbsp;10088";
+                        titleErrortTitle= "错误信息：";
+						titleErrortInfo = "节目播放暂时出现异常。";
+                        textError = "请返回首页选择其他节目或重启机顶盒。<br>若长时间出现异常，请拨打10000客户服务热线进行咨询。";
+					   break;
+			  case 10089:
+					    titleErrorNum = "错误代码:&nbsp;&nbsp;10089";
+                        titleErrortTitle= "错误信息：";
+						titleErrortInfo = "节目播放暂时出现异常。";
+                        textError = "请返回首页选择其他节目或重启机顶盒。<br>若长时间出现异常，请拨打10000客户服务热线进行咨询。";
+					   break;
+			  case 10090:
+					    titleErrorNum = "错误代码:&nbsp;&nbsp;10090";
+                        titleErrortTitle= "错误信息：";
+						titleErrortInfo = "节目播放暂时出现异常。";
+                        textError = "请返回首页选择其他节目或重启机顶盒。<br>若长时间出现异常，请拨打10000客户服务热线进行咨询。";
+					   break;
+			  case 10099:
+			  			titleErrorNum = "错误代码:&nbsp;&nbsp;10099";
+                        titleErrortTitle= "";
+						titleErrortInfo = "";
+                        textError = "网络帐号所建立的连接无效，请关机等待10分钟后重新开机。如果仍然不能正常登录，请拨打10000客户服务热线进行咨询。";
+					   break;
+			   case 400 :
+                        titleErrorNum = "错误代码 : HTTP 400";
+                        titleErrortTitle= "错误信息 : Bad";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 401 :
+              			titleErrorNum = "错误代码 : HTTP 401";
+                        titleErrortTitle= "错误信息 : Unauthorized";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 402 :
+                        titleErrorNum = "错误代码 : HTTP 402";
+                        titleErrortTitle = "错误信息 : Payment Required";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 403 :
+                        titleErrorNum = "错误代码 : HTTP 403";
+                        titleErrortTitle = "错误信息 : Forbidden";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 404 :
+                        titleErrorNum = "错误代码 : HTTP 404";
+                        titleErrortTitle = "错误信息 : Not Found";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 405 :
+                        titleErrorNum = "错误代码 : HTTP 405";
+                        titleErrortTitle = "错误信息 : Method Not Allowed";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 406 :
+                        titleErrorNum = "错误代码 : HTTP 406";
+                        titleErrortTitle = "错误信息 : Not Acceptable";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 407 :
+                        titleErrorNum = "错误代码 : HTTP 407";
+                        titleErrortTitle = "错误信息 : Proxy Authentication Required";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 408 :
+                        titleErrorNum = "错误代码 : HTTP 408";
+                        titleErrortTitle = "错误信息 : Request Timeout";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 410 :
+                        titleErrorNum = "错误代码 : HTTP 410";
+                        titleErrortTitle = "错误信息 : Gone";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 411 :
+                        titleErrorNum = "错误代码 : HTTP 411";
+                        titleErrortTitle = "错误信息 : Length Required";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 412 :
+                        titleErrorNum = "错误代码 : HTTP 412";
+                        titleErrortTitle = "错误信息 : Precondition Failed";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 413 :
+                        titleErrorNum = "错误代码 : HTTP 413";
+                        titleErrortTitle = "错误信息 : Request Entity Too Large";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 414 :
+                        titleErrorNum = "错误代码 : HTTP 414";
+                        titleErrortTitle = "错误信息 : Request-URI Too Long";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 415 :
+                        titleErrorNum = "错误代码 : HTTP 415";
+                        titleErrortTitle = "错误信息 : Unsupported Media Type";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 416 :
+                        titleErrorNum = "错误代码 : HTTP 416";
+                        titleErrortTitle = "错误信息 : Requested Range Not Satisfiable";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 417 :
+                        titleErrorNum = "错误代码 : HTTP 417";
+                        titleErrortTitle = "错误信息 : Expectation Failed";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 500 :
+                        titleErrorNum = "错误代码 : HTTP 500";
+                        titleErrortTitle = "错误信息 : Internal Server Error";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 501 :
+                        titleErrorNum = "错误代码 : HTTP 501";
+                        titleErrortTitle = "错误信息 : Not Implemented";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 502 :
+                        titleErrorNum = "错误代码 : HTTP 502";
+                        titleErrortTitle = "错误信息 : Bad Gateway";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 503 :
+                        titleErrorNum = "错误代码 : HTTP 503";
+                        titleErrortTitle = "错误信息 : Service Unavailable";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 504 :
+                        titleErrorNum = "错误代码 : HTTP 504";
+                        titleErrortTitle = "错误信息 : Gateway Timeout";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+               case 505 :
+                        titleErrorNum = "错误代码 : HTTP 505";
+                        titleErrortTitle = "错误信息 : HTTP Version Not Supported";
+                        textError= "您所观看的节目正在维护中，请按返回键返回上级页面观看其他节目。";
+                        break;
+			 default:
+                        titleErrorNum = "错误代码:&nbsp;&nbsp;10071";
+ 						titleErrortTitle= "错误信息：";
+						titleErrortInfo = "页面访问超时无响应。";
+                        textError = "请按“菜单”或“首页”键尝试重新接入，如果依然失败，请按照以下步骤尝试解决故障：<br>1、请尝试断电重启机顶盒重新拨号；<br>2、请检查接入网络是否正常；<br>3、若按以上操作，问题仍未解决，请拨打10000客户服务热线进行咨询。";
+						break;
+                }
+                document.getElementById('errinfoNum').innerHTML = titleErrorNum;
+				document.getElementById('errinfoTitle').innerHTML = titleErrortTitle;
+				document.getElementById('errinfo').innerHTML = titleErrortInfo;
+                document.getElementById('errmsg').innerHTML = textError;
+				//document.getElementById('errPrompt').innerHTML = textPromptr;
+                return false;
+        }
+
+		function $(id){
+			return document.getElementById(id);
+		}
+		
+		function lightFocus(idx){
+			if(idx == 1){
+				$("submitImg").src = "image/okLight.gif";
+			}else if(idx == 0){
+				$("cancelImg").src = "image/cancelLight.gif";
+			}
+		}
+		
+		function darkFocus(idx){
+			if(idx == 1){
+				$("submitImg").src = "image/ok.gif";
+			}else if(idx == 0){
+				$("cancelImg").src = "image/cancel.gif";
+			}
+		}
+		
+		function reset(){
+			$("userInput").value = "";
+			$("pwInput").value = "";
+		}
+		
+		function submitAction(){
+			$("errorArea").style.display = "none";
+			$("inputArea").style.display = "none";
+			$("waitArea").style.display = "block";
+			setNetuseraccount($("userInput").value);
+			setNetuserpassword($("pwInput").value);
+			setTimeout(function(){
+				location.href = "../boot/boot.html";
+			},1000);
+		}
+</script>
+
+<body onLoad="Load();" onUnLoad="UnLoad();">
+<div id='errImgid' class="errImg"></div>
+<div id="errorArea">
+	<div id="errinfoNum" class="connecterrTitle" ></div>
+	<div id="errinfoTitle" class="connecterrTitle2" ></div>
+	<div id="errinfo" class="connecterrTitle1" ></div>
+	<div id="errmsg" class="connecterrStr" ></div>
+	<div id="errPrompt" class="connecterrTitle3"></div>
+</div>
+<div id="waitArea" style="display: none;">
+	<div id="linkTitle">连接提示</div>
+	<div id="linkInfo">PPPOE正在连接...</div>
+</div>
+<div id="inputArea" style="display: none;">
+	<div id="user">帐&nbsp;号：&nbsp;<input id="userInput" type="text" /></div>
+	<div id="pw">密&nbsp;码：&nbsp;<input id="pwInput" type="password" /></div>
+	<div id="submit"><button id="submitA" onFocus="lightFocus(1);" onBlur="darkFocus(1)" onClick="submitAction();"></button><img id="submitImg" src="image/ok.gif" class="imgButton" /></div>
+	<div id="cancel"><button id="cancelA" onFocus="lightFocus(0);" onBlur="darkFocus(0)" onClick="reset();"></button><img id="cancelImg" src="image/cancel.gif" class="imgButton" /></div>
+</div>
+</body>
+<SCRIPT LANGUAGE = "JavaScript">
+	focus( );
+</SCRIPT>
+</html>

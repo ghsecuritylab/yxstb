@@ -1,0 +1,12 @@
+
+
+IF (MODULE_SettingTrans)
+    IF (EXISTS ${CMAKE_CURRENT_LIST_DIR}/${CUSTOMER})
+        include (${CMAKE_CURRENT_LIST_DIR}/${CUSTOMER}/CMakeLists.txt)
+    ENDIF (EXISTS ${CMAKE_CURRENT_LIST_DIR}/${CUSTOMER})
+    LIST (APPEND INCLUDES
+        ${CMAKE_CURRENT_LIST_DIR}
+        )
+ENDIF (MODULE_SettingTrans)
+
+

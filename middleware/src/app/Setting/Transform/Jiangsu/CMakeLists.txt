@@ -1,0 +1,9 @@
+
+LIST (APPEND IPTV_CXX_SOURCES
+    ${CMAKE_CURRENT_LIST_DIR}/ConfigFileAlternation.cpp
+    )
+
+LIST (APPEND INCLUDES
+    ${CMAKE_CURRENT_LIST_DIR}
+    )
+

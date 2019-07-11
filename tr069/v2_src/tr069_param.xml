@@ -1,0 +1,2977 @@
+<parameter name="Device.">
+    <type>object</type>
+    <WR>r</WR>
+    <parameter name="X_CU_STB.">
+        <type>object</type>
+        <WR>r</WR>
+
+        <parameter name="UserInterface.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="CDNAgentIP">
+                <type>string</type>
+                <size>32</size>
+            <WR>r</WR>
+            </parameter>
+            <parameter name="StreamServerIP">
+                <type>string</type>
+                <size>32</size>
+            <WR>r</WR>
+            </parameter>
+            <parameter name="ServiceName">
+                <type>string</type>
+                <size>64</size>
+                <WR>r</WR>
+            </parameter>
+        </parameter>
+
+        <parameter name="STBInfo.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="STBID">
+                <type>string</type>
+                <WR>r</WR>
+                <inform/>
+            </parameter>
+            <parameter name="PhyMemSize">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="StorageSize">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="OperatorInfo">
+                <type>string</type>
+                <size>32</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="IntegrityCheck">
+                <type>string</type>
+                <size>256</size>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="UpgradeURL">
+                <type>string</type>
+                <size>256</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BrowserURL1">
+                <type>string</type>
+                <size>256</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BrowserURL2">
+                <type>string</type>
+                <size>256</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BrowserTagURL">
+                <type>string</type>
+                <size>256</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="AdministratorPassword">
+                <type>string</type>
+                <size>64</size>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="UserPassword">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="UserProvince">
+                <type>string</type>
+                <size>3</size>
+                <WR>wr</WR>
+            </parameter>
+
+
+        </parameter>
+
+        <parameter name="StatisticConfiguration.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="LogServerUrl">
+                <type>string</type>
+                <size>256</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="LogUploadInterval">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="LogRecordInterval">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="StatInterval">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR1">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR2">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR3">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR4">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR5">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR1">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR2">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR3">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR4">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR5">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="FramesLostR1">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="FramesLostR2">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="FramesLostR3">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="FramesLostR4">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="FramesLostR5">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+
+        </parameter>
+
+        <parameter name="ServiceStatistics.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="Startpoint">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="Endpoint">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AuthNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AuthFailNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AuthFailInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiReqNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiFailNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiFailInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VodReqNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VodFailNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VodFailInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HTTPReqNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HTTPFailNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HTTPFailInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiAbendNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODAbendNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="PlayErrorNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="PlayErrorInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MutiAbendNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR1Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR2Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR3Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR4Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR5Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR1Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR2Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR3Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR4Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR5Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiBitRateR1Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiBitRateR2Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiBitRateR3Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiBitRateR4Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiBitRateR5Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODBitRateR1Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODBitRateR2Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODBitRateR3Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODBitRateR4Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODBitRateR5Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FramesLostR1Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FramesLostR2Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FramesLostR3Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FramesLostR4Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FramesLostR5Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AbendNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AbendInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR1">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR2">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR3">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR4">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR5">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR1">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR2">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR3">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR4">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR5">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="BitRateR1">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="BitRateR2">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="BitRateR3">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="BitRateR4">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="BitRateR5">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="PacketsLost">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="JitterMax">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FrameRate">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FrameLoss">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+
+        </parameter>
+
+        <parameter name="AuthServiceInfo.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="PPPOEEnable">
+                <type>string</type>
+                <size>1</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PPPOEID">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+                <boot/>
+            </parameter>
+            <parameter name="PPPOEPassword">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="UserID">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+                <boot/>
+            </parameter>
+            <parameter name="UserIDPassword">
+                <type>string</type>
+                <size>128</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PPPOEID2">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PPPOEPassword2">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="UserID2">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="UserIDPassword2">
+                <type>string</type>
+                <size>128</size>
+                <WR>wr</WR>
+            </parameter>
+        </parameter>
+
+        <parameter name="Alarm.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="EnabledAlarm">
+                <type>boolean</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="MonitoringInterval">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostRateAlarm">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLost">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FramesLostAlarm">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="FramesLost">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AlarmReason">
+                <type>string</type>
+                <size>1</size>
+                <WR>wr</WR>
+            </parameter>
+        </parameter>
+
+    </parameter>
+
+    <parameter name="DeviceInfo.">
+        <type>object</type>
+        <WR>r</WR>
+
+        <parameter name="MemoryStatus.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="Total">
+                <type>unsigned</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="Free">
+                <type>unsigned</type>
+                <WR>r</WR>
+            </parameter>
+        </parameter>
+
+        <parameter name="ProcessStatus.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="CPUUsage">
+                <type>unsigned</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="ProcessNumberOfEntries">
+                <type>unsigned</type>
+                <WR>r</WR>
+            </parameter>
+        </parameter>
+ 
+        <parameter name="ModelID">
+            <type>string</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="ConfigFileVersion">
+            <type>string</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="EnabledOptions">
+            <type>string</type>
+            <WR>r</WR>
+        </parameter>
+
+        <parameter name="X_CTC_IPTV_Alarm.">
+            <type>object</type>
+            <WR>wr</WR>
+            <parameter name="AlarmSwitch">
+                <type>boolean</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="AlarmReportLevel">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+
+            <parameter name="AlarmConfig.">
+                <type>object</type>
+                <WR>r</WR>
+                <parameter name="CPUAlarmValue">
+                    <type>string</type>
+                    <size>16</size>
+                    <WR>wr</WR>
+                </parameter>
+                <parameter name="MemoryAlarmValue">
+                    <type>string</type>
+                    <size>16</size>
+                    <WR>wr</WR>
+                </parameter>
+                <parameter name="DiskAlarmValue">
+                    <type>int</type>
+                    <WR>wr</WR>
+                </parameter>
+                <parameter name="PacketsLostAlarmValue">
+                    <type>string</type>
+                    <size>16</size>
+                    <WR>wr</WR>
+                </parameter>
+                <parameter name="FramesLostAlarmValue">
+                    <type>string</type>
+                    <size>16</size>
+                    <WR>wr</WR>
+                </parameter>
+                <parameter name="TimeLapseAlarmValue">
+                    <type>string</type>
+                    <size>16</size>
+                    <WR>wr</WR>
+                </parameter>
+                <parameter name="CushionAlarmValue">
+                    <type>string</type>
+                    <size>16</size>
+                    <WR>wr</WR>
+                </parameter>
+            </parameter>
+
+            <parameter name="{i}.">
+                <type>object</type>
+                <WR>r</WR>
+                <parameter name="AlarmID">
+                    <type>unsigned</type>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="AlarmType">
+                    <type>unsigned</type>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="AlarmLevel">
+                    <type>unsigned</type>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="AlarmReason">
+                    <type>unsigned</type>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="AlarmTime">
+                    <type>datetime</type>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="AlarmDetail">
+                    <type>string</type>
+                    <size>64</size>
+                    <WR>r</WR>
+                </parameter>
+            </parameter>
+        </parameter>
+
+        <parameter name="X_CTC_IPTV_Monitor.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="Enable">
+                <type>boolean</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="TimeList">
+                <type>string</type>
+                <size>16</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="LogUploadInterval">
+                <type>string</type>
+                <size>16</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="IsFileorRealTime">
+                <type>boolean</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="ParameterList">
+                <type>string</type>
+                <size>256</size>
+                <WR>wr</WR>
+            </parameter>
+        </parameter>
+
+    </parameter>
+
+    <parameter name="ManagementServer.">
+        <type>object</type>
+        <WR>r</WR>
+        <parameter name="IPTVServiceUsername">
+            <type>string</type>
+            <size>64</size>
+            <WR>wr</WR>
+        </parameter>
+    </parameter>
+
+    <parameter name="X_CTC_IPTV.">
+        <type>object</type>
+        <WR>r</WR>
+        <parameter name="STBID">
+            <type>string</type>
+            <WR>r</WR>
+            <inform/>
+        </parameter>
+        <parameter name="PhyMemSize">
+            <type>string</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="StorageSize">
+            <type>string</type>
+            <WR>r</WR>
+        </parameter>
+
+        <parameter name="LAN.">
+            <type>object</type>
+            <WR>r</WR>
+
+            <parameter name="TCPSYNDiagnostics.">
+                <type>object</type>
+                <WR>r</WR>
+                <parameter name="DiagnosticsState">
+                    <type>string</type>
+                    <size>32</size>
+                    <WR>wr</WR>
+                </parameter>
+                <parameter name="Host">
+                    <type>string</type>
+                    <size>256</size>
+                    <WR>wr</WR>
+                </parameter>
+                <parameter name="NumberOfRepetitions">
+                    <type>unsigned</type>
+                    <WR>wr</WR>
+                </parameter>
+                <parameter name="Timeout">
+                    <type>unsigned</type>
+                    <WR>wr</WR>
+                </parameter>
+                <parameter name="SuccessCount">
+                    <type>unsigned</type>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="FailureCount">
+                    <type>unsigned</type>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="AverageResponseTime">
+                    <type>unsigned</type>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="MinimumResponseTime">
+                    <type>unsigned</type>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="MaximumResponseTime">
+                    <type>unsigned</type>
+                    <WR>r</WR>
+                </parameter>
+            </parameter>
+        </parameter>
+
+        <parameter name="StatisticConfiguration.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="Enable">
+                <type>boolean</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="LogServerUrl">
+                <type>string</type>
+                <size>512</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="LogUploadInterval">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="LogRecordInterval">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="MonitoringInterval">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="IsFileorRealTime">
+                <type>boolean</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="StatInterval">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR1">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR2">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR3">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR4">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR5">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR1">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR2">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR3">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR4">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR5">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="HD_BitRateR1">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="HD_BitRateR2">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="HD_BitRateR3">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="HD_BitRateR4">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="HD_BitRateR5">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR1From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR1Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR2From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR2Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR3From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR3Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR4From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR4Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR5From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR5Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR1From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR1Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR2From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR2Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR3From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR3Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR4From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR4Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR5From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR5Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+
+        </parameter>
+
+        <parameter name="ServiceStatistics.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="Startpoint">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="Endpoint">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AuthNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AuthFailNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AuthFailInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiReqNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiFailNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiFailInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VodReqNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VodFailNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VodFailInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HTTPReqNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HTTPFailNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HTTPFailInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AbendNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AbendInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="TotalAbendDuration">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MaxAbendDuration">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="PlayErrorNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiRRT">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VodRRT">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HTTPRRT">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODAbendNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MutiAbendNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiAbendUPNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODUPAbendNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_MultiAbendNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_VODAbendNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_MultiUPAbendNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_VODUPAbendNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="PlayErrorInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR1Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR2Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR3Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR4Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR5Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FECMultiPacketsLostR1Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FECMultiPacketsLostR2Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FECMultiPacketsLostR3Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FECMultiPacketsLostR4Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FECMultiPacketsLostR5Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR1Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR2Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR3Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR4Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR5Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="ARQVODPacketsLostR1Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="ARQVODPacketsLostR2Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="ARQVODPacketsLostR3Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="ARQVODPacketsLostR4Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="ARQVODPacketsLostR5Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiBitRateR1Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiBitRateR2Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiBitRateR3Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiBitRateR4Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiBitRateR5Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODBitRateR1Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODBitRateR2Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODBitRateR3Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODBitRateR4Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODBitRateR5Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_MultiPacketsLostR1Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_MultiPacketsLostR2Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_MultiPacketsLostR3Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_MultiPacketsLostR4Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_MultiPacketsLostR5Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_FECMultiPacketsLostR1Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_FECMultiPacketsLostR2Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_FECMultiPacketsLostR3Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_FECMultiPacketsLostR4Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_FECMultiPacketsLostR5Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_VODPacketsLostR1Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_VODPacketsLostR2Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_VODPacketsLostR3Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_VODPacketsLostR4Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_VODPacketsLostR5Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_ARQVODPacketsLostR1Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_ARQVODPacketsLostR2Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_ARQVODPacketsLostR3Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_ARQVODPacketsLostR4Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_ARQVODPacketsLostR5Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_VODBitRateR1Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_VODBitRateR2Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_VODBitRateR3Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_VODBitRateR4Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_VODBitRateR5Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_MultiBitRateR1Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_MultiBitRateR2Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_MultiBitRateR3Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_MultiBitRateR4Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HD_MultiBitRateR5Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="BufferIncNmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="BufferDecNmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FramesLostR1Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FramesLostR2Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FramesLostR3Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FramesLostR4Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FramesLostR5Nmb">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+
+            <parameter name="AbendNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AbendInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="TotalAbendDuration">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MaxAbendDuration">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR1">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR2">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR3">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR4">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR5">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR1">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR2">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR3">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR4">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR5">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="BitRateR1">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR2">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR3">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR4">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR5">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLost">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="JitterMax">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FrameRate">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FrameLoss">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+
+        </parameter>
+
+        <parameter name="ServiceInfo.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="PPPoEID">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+                <boot/>
+                <noReset/>
+            </parameter>
+            <parameter name="PPPoEPassword">
+                <type>string</type>
+                <size>64</size>
+                <WR>w</WR>
+                <noReset/>
+            </parameter>
+            <parameter name="UserID">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+                <boot/>
+                <notification/>
+            </parameter>
+            <parameter name="UserIDPassword">
+                <type>string</type>
+                <size>128</size>
+                <WR>w</WR>
+            </parameter>
+            <parameter name="AuthURL">
+                <type>string</type>
+                <size>128</size>
+                <WR>wr</WR>
+                <boot/>
+            </parameter>
+            <parameter name="ServiceList">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="DHCPID">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="DHCPPassword">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="IPTV_DHCP_Enable">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="IPTV_DHCP_Username">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="IPTV_DHCP_Password">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="Password">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="AuthURLBackup">
+                <type>string</type>
+                <size>128</size>
+                <WR>wr</WR>
+            </parameter>
+
+        </parameter>
+
+        <parameter name="SQMConfiguration.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="SQMLisenPort">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="SQMServerPort">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+        </parameter>
+
+        <parameter name="PlayDiagnostics.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="DiagnosticsState">
+                <type>string</type>
+                <size>31</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PlayURL">
+                <type>string</type>
+                <size>1024</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PlayState">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+        </parameter>
+
+        <parameter name="Monitor.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="MdiMLR">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MdiDF">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="Jitter">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="CPURate">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MemRate">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AuthNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AuthFailNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiReqNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VodReqNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiFailNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VodFailNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="BufUnderFlowNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="BufOverFlowNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="ResponseDelay">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="ChannelSwitchDelay">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="ChannelName">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="ChannelAddress">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="Transmission">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="ProgramStartTime">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="ProgramEndTime">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="BitRate">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+        </parameter>
+
+        <parameter name="UserAccount.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="Enable">
+                <type>string</type>
+                <size>1</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="AccountNumber">
+                <type>string</type>
+                <size>33</size>
+                <WR>wr</WR>
+            </parameter>
+        </parameter>
+
+        <parameter name="LogMsg.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="Enable">
+                <type>boolean</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="MsgOrFile">
+                <type>boolean</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="Duration">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="LogFtpServer">
+                <type>string</type>
+                <size>1024</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="LogFtpUser">
+                <type>string</type>
+                <size>32</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="LogFtpPassword">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="RTSPInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HTTPInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="IGMPInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="PkgTotalOneSec">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="ByteTotalOneSec">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="PkgLostRate">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AvarageRate">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="BUFFER">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="ERROR">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VendorExt">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+        </parameter>
+
+        <parameter name="IMSInfo.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="SIPProxy">
+                <type>string</type>
+                <size>256</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="SIPProxy_Port">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BACKUP_Proxy">
+                <type>string</type>
+                <size>256</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BACKUP_Proxy_Port">
+                <type>string</type>
+                <size>256</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BACKUP_Proxy_Port">
+                <type>string</type>
+                <size>32</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="SIPPassword">
+                <type>string</type>
+                <size>256</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="ImsDomain">
+                <type>string</type>
+                <size>256</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BACDomainName">
+                <type>string</type>
+                <size>2048</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BACAddress1">
+                <type>string</type>
+                <size>128</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BACAddress2">
+                <type>string</type>
+                <size>128</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="UserID">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="Password">
+                <type>string</type>
+                <size>128</size>
+                <WR>wr</WR>
+            </parameter>
+        </parameter>
+
+    </parameter>
+
+    <parameter name="Qos.">
+        <type>object</type>
+        <WR>r</WR>
+        <parameter name="ResetStatistics">
+            <type>boolean</type>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="PacketsReceived">
+            <type>int</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="PacketsLost">
+            <type>int</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="BytesReceived">
+            <type>int</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="FractionLost">
+            <type>string</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="BitRate">
+            <type>int</type>
+            <WR>r</WR>
+        </parameter>
+    </parameter>
+
+    <parameter name="WLAN.">
+        <type>object</type>
+        <WR>r</WR>
+        <parameter name="UseWLAN">
+            <type>boolean</type>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="EncryOnOff">
+            <type>boolean</type>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="EssID">
+            <type>string</type>
+            <size>32</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="KeyVector">
+            <type>string</type>
+            <size>32</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="RfMode">
+            <type>int</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="EncryKeyID">
+            <type>int</type>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="AuthMode">
+            <type>int</type>
+            <WR>r</WR>
+        </parameter>
+    </parameter>
+
+    <parameter name="PmInfo.">
+        <type>object</type>
+        <WR>r</WR>
+        <parameter name="PmLossPacketsNum">
+            <type>int</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="PmBitRate">
+            <type>int</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="PmLostRate">
+            <type>string</type>
+            <size>32</size>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="MinDF">
+           <type>int</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="AvgDF">
+            <type>int</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="MaxDF">
+            <type>int</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="Dithering">
+            <type>int</type>
+            <WR>r</WR>
+        </parameter>
+    </parameter>
+
+    <parameter name="STBService.">
+        <type>object</type>
+        <WR>r</WR>
+        <parameter name="StreamingControlProtocols">
+            <type>string</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="StreamingTransportProtocols">
+            <type>string</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="StreamingTransportControlProtocols">
+            <type>string</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="DownloadTransportProtocols">
+            <type>string</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="MultiplexTypes">
+            <type>string</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="MaxDejitteringBufferSize">
+            <type>int</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="AudioStandards">
+            <type>string</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="VideoStandards">
+            <type>string</type>
+            <WR>r</WR>
+        </parameter>
+
+        <parameter name="1.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="Capabilities.">
+                <type>object</type>
+                <WR>r</WR>
+                <parameter name="CompositeVideoStandard">
+                    <type>string</type>
+                    <size>16</size>
+                    <WR>wr</WR>
+                </parameter>
+                <parameter name="AspectRatio">
+                    <type>string</type>
+                    <size>16</size>
+                    <WR>wr</WR>
+                </parameter>
+            </parameter>
+        </parameter>
+
+
+    </parameter>
+
+    <parameter name="Config.">
+        <type>object</type>
+            <WR>r</WR>
+            <parameter name="PersistentData">
+            <type>string</type>
+                <size>256</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="ConfigFile">
+                <type>string</type>
+                <size>32768</size>
+                <WR>wr</WR>
+            </parameter>
+    </parameter>
+
+    <parameter name="GatewayInfo.">
+        <type>object</type>
+        <WR>r</WR>
+        <parameter name="ManufacturerOUI">
+            <type>string</type>
+            <size>6</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="ProductClass">
+            <type>string</type>
+            <size>32</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="SerialNumber">
+            <type>string</type>
+            <size>64</size>
+            <WR>wr</WR>
+            </parameter>
+    </parameter>
+
+    <parameter name="LAN.">
+        <type>object</type>
+        <WR>r</WR>
+        <parameter name="MACAddressOverride">
+            <type>boolean</type>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="IsSupportIPv6">
+            <type>boolean</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="AddressingType">
+            <type>string</type>
+            <size>15</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="IPAddress">
+            <type>string</type>
+            <size>15</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="SubnetMask">
+            <type>string</type>
+            <size>15</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="DefaultGateway">
+            <type>string</type>
+            <size>15</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="DNSServers">
+            <type>string</type>
+            <size>64</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="MACAddress">
+            <type>string</type>
+            <size>64</size>
+            <WR>wr</WR>
+        </parameter>
+    </parameter>
+
+    <parameter name="Time.">
+        <type>object</type>
+        <WR>r</WR>
+        <parameter name="NTPServer">
+            <type>string</type>
+            <size>64</size>
+            <WR>wr</WR>
+        </parameter>
+            <parameter name="NTPServer1">
+            <type>string</type>
+            <size>31</size>
+            <WR>wr</WR>
+            </parameter>
+            <parameter name="NTPServer2">
+            <type>string</type>
+            <size>31</size>
+            <WR>wr</WR>
+            </parameter>
+                <parameter name="CurrentLocalTime">
+                        <type>datetime</type>
+                        <WR>r</WR>
+                        </parameter>
+                <parameter name="LocalTimeZone">
+                        <type>string</type>
+                        <size>64</size>
+                        <WR>wr</WR>
+                </parameter>
+    </parameter>
+
+    <parameter name="UserInterface.">
+        <type>object</type>
+        <WR>r</WR>
+        <parameter name="BackgroundColor">
+            <type>string</type>
+            <size>6</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="PasswordRequired">
+            <type>boolean</type>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="PasswordUserSelectable">
+            <type>boolean</type>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="UpgradeAvailable">
+            <type>boolean</type>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="WarrantyDate">
+            <type>datetime</type>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="ISPName">
+            <type>string</type>
+            <size>64</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="ISPHelpDesk">
+            <type>string</type>
+            <size>32</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="ISPHomePage">
+            <type>string</type>
+            <size>256</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="ISPHelpPage">
+            <type>string</type>
+            <size>256</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="ISPLogo">
+            <type>string</type>
+            <size>5460</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="ISPLogoSize">
+            <type>int</type>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="ISPMailServer">
+            <type>string</type>
+            <size>256</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="ISPNewsServer">
+            <type>string</type>
+            <size>256</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="TextColor">
+            <type>string</type>
+            <size>6</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="BackgroundColor">
+            <type>string</type>
+            <size>6</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="ButtonColor">
+            <type>string</type>
+            <size>6</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="ButtonTextColor">
+            <type>string</type>
+            <size>6</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="UserUpdateServer">
+            <type>string</type>
+            <size>256</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="CDNAgentIP">
+            <type>string</type>
+            <size>32</size>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="StreamServerIP">
+            <type>string</type>
+            <size>32</size>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="ServiceName">
+            <type>string</type>
+            <size>64</size>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="AutoUpdateServer">
+            <type>string</type>
+            <size>256</size>
+            <WR>w</WR>
+        </parameter>
+        <parameter name="CurrentLanguage">
+            <type>string</type>
+            <size>16</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="AvailableLanguages">
+            <type>string</type>
+            <size>0</size>
+            <WR>r</WR>
+        </parameter>
+
+        <parameter name="Logo.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="X_CT-COM_StartPicURL">
+                <type>string</type>
+                <size>256</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="X_CT-COM_StartPic_Enable">
+                <type>boolean</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="X_CT-COM_StartPic_Result">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="X_CT-COM_BootPicURL">
+                <type>string</type>
+                <size>256</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="X_CT-COM_BootPic_Enable">
+                <type>boolean</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="X_CT-COM_BootPic_Result">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="X_CT-COM_AuthenticatePicURL">
+                <type>string</type>
+                <size>256</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="X_CT-COM_AuthenticatePic_Enable">
+                <type>boolean</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="X_CT-COM_AuthenticatePic_Result">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+        </parameter>
+
+    </parameter>
+
+    <parameter name="X_00E0FC.">
+        <type>object</type>
+        <WR>r</WR>
+        <parameter name="STBID">
+            <type>string</type>
+            <WR>r</WR>
+            <inform/>
+        </parameter>
+        <parameter name="PhyMemSize">
+            <type>string</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="StorageSize">
+            <type>string</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="IsEncryptMark">
+            <type>int</type>
+            <WR>r</WR>
+            <inform/>
+        </parameter>
+        <parameter name="EncryptParameters">
+            <type>string</type>
+            <WR>r</WR>
+            <inform/>
+        </parameter>
+        <parameter name="SoftwareVersionList">
+            <type>string</type>
+            <WR>r</WR>
+            <boot/>
+        </parameter>
+        <parameter name="HDMIConnect">
+            <type>boolean</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="RecoveryMode">
+            <type>int</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="ConnectMode">
+            <type>int</type>
+            <WR>r</WR>
+        </parameter>
+        <parameter name="ErrorCodeSwitch">
+            <type>boolean</type>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="ErrorCodeInterval">
+            <type>int</type>
+            <WR>wr</WR>
+        </parameter>
+
+        <parameter name="AlarmSwitch">
+            <type>boolean</type>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="AlarmReportLevel">
+            <type>int</type>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="CPUAlarmValue">
+            <type>string</type>
+            <size>16</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="MemoryAlarmValue">
+            <type>string</type>
+            <size>16</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="DiskAlarmValue">
+            <type>int</type>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="PacketsLostAlarmValue">
+            <type>string</type>
+            <size>16</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="BandwidthAlarmValue">
+            <type>string</type>
+            <size>16</size>
+            <WR>wr</WR>
+        </parameter>
+        <parameter name="RemoteControlEnable">
+            <type>boolean</type>
+            <WR>wr</WR>
+        </parameter>
+
+        <parameter name="StatisticConfiguration.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="LogServerUrl">
+                <type>string</type>
+                <size>256</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="LogUploadInterval">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="LogRecordInterval">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="StatInterval">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR1">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR2">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR3">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR4">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR5">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR1">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR2">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR3">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR4">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR5">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="MonitoringInterval">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR1From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR1Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR2From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR2Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR3From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR3Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR4From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR4Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR5From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PacketsLostR5Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR1From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR1Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR2From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR2Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR3From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR3Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR4From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR4Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR5From">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="BitRateR5Till">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+        </parameter>
+
+        <parameter name="ServiceStatistics.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="Startpoint">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="Endpoint">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AuthNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AuthFailNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AuthFailInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiReqNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiFailNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiFailInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VodReqNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VodFailNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VodFailInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HTTPReqNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HTTPFailNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="HTTPFailInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AbendNumbers">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AbendInfo">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="TotalAbendDuration">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MaxAbendDuration">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="BootUpTime">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="PowerOnTime">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR1">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR2">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR3">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR4">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MultiPacketsLostR5">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR1">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR2">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR3">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR4">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="VODPacketsLostR5">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="BitRateR1">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="BitRateR2">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="BitRateR3">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="BitRateR4">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="BitRateR5">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="PacketsLost">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="JitterMax">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FrameRate">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="FrameLoss">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+
+        </parameter>
+
+        <parameter name="ServiceInfo.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="PPPoEID">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+                <boot/>
+                <noReset/>
+            </parameter>
+            <parameter name="PPPoEPassword">
+                <type>string</type>
+                <size>64</size>
+                <WR>w</WR>
+                <noReset/>
+            </parameter>
+            <parameter name="UserID">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+                <boot/>
+                <notification/>
+            </parameter>
+            <parameter name="UserIDPassword">
+                <type>string</type>
+                <size>128</size>
+                <WR>w</WR>
+            </parameter>
+            <parameter name="AuthURL">
+                <type>string</type>
+                <size>128</size>
+                <WR>wr</WR>
+                <boot/>
+            </parameter>
+            <parameter name="DHCPID">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="DHCPPassword">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+            </parameter>
+        </parameter>
+
+        <parameter name="PlayDiagnostics.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="DiagnosticsState">
+                <type>string</type>
+                <size>31</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PlayURL">
+                <type>string</type>
+                <size>1024</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="PlayState">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+        </parameter>
+
+        <parameter name="AutoOnOffConfiguration.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="IsAutoPowerOn">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="AutoPowerOnTime">
+                <type>string</type>
+                <size>10</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="AutoShutdownTime">
+                <type>string</type>
+                <size>10</size>
+                <WR>wr</WR>
+            </parameter>
+        </parameter>
+
+        <parameter name="PacketCapture.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="State">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="Duration">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="IP">
+                <type>string</type>
+                <size>15</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="Port">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="UploadURL">
+                <type>string</type>
+                <size>1024</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="Username">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="Password">
+                <type>string</type>
+                <size>64</size>
+                <WR>wr</WR>
+            </parameter>
+        </parameter>
+
+        <parameter name="BandwidthDiagnostics.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="DiagnosticsState">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="DownloadURL">
+                <type>string</type>
+                <size>512</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="Username">
+                <type>string</type>
+                <size>128</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="Password">
+                <type>string</type>
+                <size>128</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="ErrorCode">
+                <type>string</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="AvgSpeed">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MaxSpeed">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+            <parameter name="MinSpeed">
+                <type>int</type>
+                <WR>r</WR>
+            </parameter>
+        </parameter>
+
+        <parameter name="LAN.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="TCPSYNDiagnostics.">
+                <type>object</type>
+                <WR>r</WR>
+                <parameter name="DiagnosticsState">
+                    <type>string</type>
+                    <size>32</size>
+                    <WR>wr</WR>
+                </parameter>
+                <parameter name="Host">
+                    <type>string</type>
+                    <size>256</size>
+                    <WR>wr</WR>
+                </parameter>
+                <parameter name="NumberOfRepetitions">
+                    <type>unsigned</type>
+                    <WR>wr</WR>
+                </parameter>
+                <parameter name="Timeout">
+                    <type>unsigned</type>
+                    <WR>wr</WR>
+                </parameter>
+                <parameter name="SuccessCount">
+                    <type>unsigned</type>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="FailureCount">
+                    <type>unsigned</type>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="AverageResponseTime">
+                    <type>unsigned</type>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="MinimumResponseTime">
+                    <type>unsigned</type>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="MaximumResponseTime">
+                    <type>unsigned</type>
+                    <WR>r</WR>
+                </parameter>
+            </parameter>
+        </parameter>
+
+        <parameter name="SQMConfiguration.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="SQMLisenPort">
+                <type>unsigned</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="SQMServerPort">
+                <type>unsigned</type>
+                <WR>wr</WR>
+            </parameter>
+        </parameter>
+
+        <parameter name="LogParaConfiguration.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="LogType">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="LogLevel">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="LogOutPutType">
+                <type>int</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="SyslogServer">
+                <type>string</type>
+                <size>512</size>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="SyslogStartTime">
+                <type>datetime</type>
+                <WR>wr</WR>
+            </parameter>
+            <parameter name="SyslogContinueTime">
+                <type>unsigned</type>
+                <WR>wr</WR>
+            </parameter>
+
+        </parameter>
+
+        <parameter name="ErrorCode.">
+            <type>object</type>
+            <WR>wr</WR>
+            <parameter name="{i}.">
+                <type>object</type>
+                <WR>r</WR>
+                <parameter name="ErrorCodeTime">
+                    <type>datetime</type>
+                    <WR>wr</WR>
+                </parameter>
+                <parameter name="ErrorCodeValue">
+                    <type>string</type>
+                    <size>32</size>
+                    <WR>wr</WR>
+                </parameter>
+            </parameter>
+        </parameter>
+
+        <parameter name="Alarm.">
+            <type>object</type>
+            <WR>wr</WR>
+            <parameter name="{i}.">
+                <type>object</type>
+                <WR>r</WR>
+                <parameter name="AlarmSN">
+                    <type>unsigned</type>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="AlarmObjectInstance">
+                    <type>string</type>
+                    <size>64</size>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="AlarmLocation">
+                    <type>string</type>
+                    <size>64</size>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="AlarmCode">
+                    <type>string</type>
+                    <size>64</size>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="AlarmRaisedTime">
+                    <type>string</type>
+                    <size>64</size>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="AlarmClearedTime">
+                    <type>string</type>
+                    <size>64</size>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="PerceivedSeverity">
+                    <type>int</type>
+                    <WR>r</WR>
+                </parameter>
+                <parameter name="AdditionalInformation">
+                    <type>string</type>
+                    <size>64</size>
+                    <WR>r</WR>
+                </parameter>
+            </parameter>
+        </parameter>
+    </parameter>
+    <parameter name="X_CMCC_OTV.">
+        <type>object</type>
+        <WR>r</WR>
+        <parameter name="STBInfo.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="STBID">
+            <type>string</type>
+            <WR>r</WR>
+            <inform/>
+            </parameter>
+            <parameter name="PhyMemSize">
+            <type>string</type>
+            <WR>r</WR>
+            </parameter>
+            <parameter name="StorageSize">
+            <type>string</type>
+            <WR>r</WR>
+            </parameter>
+        </parameter>
+        <parameter name="ServiceInfo.">
+            <type>object</type>
+            <WR>r</WR>
+            <parameter name="PPPoEID">
+            <type>string</type>
+            <size>36</size>
+            <WR>wr</WR>
+            </parameter>
+            <parameter name="PPPoEPassword">
+            <type>string</type>
+            <size>256</size>
+            <WR>wr</WR>
+            </parameter>
+            <parameter name="DHCPID">
+            <type>string</type>
+            <size>36</size>
+            <WR>wr</WR>
+            </parameter>
+            <parameter name="DHCPPassword">
+            <type>string</type>
+            <size>256</size>
+            <WR>wr</WR>
+            </parameter>
+            <parameter name="UserID">
+            <type>string</type>
+            <size>64</size>
+            <WR>wr</WR>
+            </parameter>
+            <parameter name="Password">
+            <type>string</type>
+            <size>256</size>
+            <WR>wr</WR>
+            </parameter>
+            <parameter name="AuthURL">
+            <type>string</type>
+            <size>256</size>
+            <WR>wr</WR>
+            </parameter>
+        </parameter>
+    </parameter>
+</parameter>

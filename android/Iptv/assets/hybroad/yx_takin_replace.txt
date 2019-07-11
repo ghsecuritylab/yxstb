@@ -1,0 +1,24 @@
+/EPG/jsp/CDTVOTT/en/js/do/playControlVod.js
+var time = numToTime(currTime);
+var time = numToTime(currTime);alert("In showProcessBar,totalTime="+totalTime+";currTime="+currTime+";time="+time);
+/EPG/jsp/CDTVOTT/en/js/do/playControlVod.js
+var time		= numToTime(currTime);
+var time		= numToTime(currTime);alert("In showPauseBar,totalTime="+totalTime+";currTime="+currTime+";time="+time);
+/EPG/jsp/CDTVOTT/en/js/do/playControlVod.js
+var current_pause;
+var current_pause;alert("In changePauseFocus,totalTime="+totalTime+";numNow="+numNow+";currTime="+currTime);
+/EPG/jsp/CDTVOTT/en/js/do/playControlVod.js
+var endTime = mp.getMediaDuration();
+var endTime = mp.getMediaDuration();alert("In addBookMark or addPreBookMark,beginTime="+beginTime+";endTime="+endTime);
+/EPG/jsp/CDTVOTT/en/js/do/playControlVod.js
+if(mp.getCurrentPlayTime() < previewEndTime)
+if(mp.getCurrentPlayTime() < previewEndTime);alert("In previewStop,mp.getCurrentPlayTime()="+mp.getCurrentPlayTime());
+/EPG/jsp/CDTVOTT/en/js/do/playControlVod.js
+/*if(canPreview == 0)
+alert("In createMiniDiv,totalTime="+totalTime+"numToTime(totalTime)="+numToTime(totalTime));/*if(canPreview == 0)
+/EPG/jsp/CDTVOTT/en/js/do/playControlVod.js
+$('current_pause').innerHTML = hour+':'+minute+':'+second;
+$('current_pause').innerHTML = hour+':'+minute+':'+second;alert("In runBarTimer,t="+t+"n="+n+"totalTime="+totalTime+"currTime="+currTime+"hour="+hour+"minute="+minute+"second="+second);
+/EPG/jsp/CDTVOTT/en/js/do/playControlVod.js
+if(checkDivIsShow("exit_div")||checkDivIsShow("end_div")||checkDivIsShow("addBook_div") || checkDivIsShow("tishi_div"))
+alert("++++keypress=======keyright"); if(checkDivIsShow("exit_div")||checkDivIsShow("end_div")||checkDivIsShow("addBook_div") || checkDivIsShow("tishi_div"))

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+INTERFACE=$1
+PEERNAME=$2
+USERNAME=$3
+DEVNAME=$4
+PHYCARD=$5
+BAUDRATE=$6
+ERRCODE=$7
+
+if [ "$ERRCODE" != "0" ]; then
+	rm -f /var/misc/ppp/ppp-"$PHYCARD".info
+	for x in INTERFACE PEERNAME USERNAME DEVNAME BAUDRATE ERRCODE; do
+			eval echo "$x=\'\$$x\'" >> /var/misc/ppp/ppp-"$PHYCARD".info
+	done
+fi
+
+set -- /var/misc/ppp/ppp-"$PHYCARD".info "$x"

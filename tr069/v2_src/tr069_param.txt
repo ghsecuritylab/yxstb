@@ -1,0 +1,22 @@
+参数配置文件由多个参数数据结构组成，采用XML格式，如下
+<param>
+    <name>...</name>
+    <type>...</type>
+    [<size>...</size>]
+    <WR>...</WR>
+    [<inform/>]
+    [<restore/>]
+    [<notification/>]
+</param>
+属性name是参数名称
+属性type是参数数据类型包括 object, int、unsigned、boolean、string、datetime
+属性size是参数值长度，只有当type为string时才有效
+属性WR是读写属性，包括 r、w、wr
+当参数需要在HMS请求参数重置时不改变参数值，就需要restore属性
+当参数需在本地发生变更时，参数需要立即上报给HMS，就需要notification属性
+
+当参数属性为object时，子对象的成员嵌套在这个参数结构体内，且在其他属性之
+后。一般情况下object的属性WR的值为r，如果WR的值为wr，表示该参数包含0~n
+个可动态增减的子对象。
+
+属性inform是与ACS交互时要在inform消息体中出现的参数属性

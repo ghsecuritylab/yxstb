@@ -1,0 +1,18 @@
+
+LIST (APPEND IPTV_CXX_SOURCES
+    ${CMAKE_CURRENT_LIST_DIR}/Types.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/RefCnt.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/SysTime.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/Thread.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/StringData.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/Synchronized.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ITC.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ITCPlayer.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ITCPlayerCBridge.cpp
+    )
+
+LIST (APPEND INCLUDES
+    ${CMAKE_CURRENT_LIST_DIR}
+    )
+
+
